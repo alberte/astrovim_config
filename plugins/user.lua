@@ -14,5 +14,12 @@ return {
     "max397574/better-escape.nvim", config = function() 
       require("better_escape").setup()
     end,
+  }, {
+    "simrat39/rust-tools.nvim", {
+      "williamboman/mason-lspconfig.nvim", 
+      opts = {
+        ensure_installed = {"rust_analyzer"},
+      }
+    }
   }
 }

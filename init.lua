@@ -32,9 +32,9 @@ return {
       -- control auto formatting on save
       format_on_save = {
         enabled = true, -- enable or disable format on save globally
-        allow_filetypes = { -- enable format on save for specified filetypes only
-          -- "go",
-        },
+        -- allow_filetypes = { -- enable format on save for specified filetypes only
+        --   -- "go",
+        -- },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
         },
@@ -51,6 +51,9 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+    },
+    setup_handlers = {
+      tsserver = function(_, opts) require("rust-tools").setup { server = opts } end,
     },
   },
 
