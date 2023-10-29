@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "catppuccin",
+  colorscheme = "catppuccin-mocha",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -53,7 +53,7 @@ return {
       -- "pyright"
     },
     setup_handlers = {
-      tsserver = function(_, opts) require("rust-tools").setup { server = opts } end,
+      rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end,
     },
   },
 
