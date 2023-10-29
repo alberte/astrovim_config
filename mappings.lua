@@ -27,11 +27,13 @@ return {
       end,
       desc = "Pick to close",
     },
+    ["<C-f>"] = { ":Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy find in buffer" },
+    ["<C-p>"] = { ":Telescope lsp_dynamic_workspace_symbols<cr>", desc = "Find Workspace Symbols" },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
-    ["<leader>b"] = { name = "Buffers" },
+    -- ["<leader>b"] = { name = "Buffers" },
     -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
   },
   t = {
     -- setting a mapping to false will disable it
